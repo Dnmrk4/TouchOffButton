@@ -1,0 +1,33 @@
+.container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hidden {
+  transform: translateX(100%);
+}
+
+.visible {
+  transform: translateX(0);
+}
+
+.button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.button:hover {
+  background-color: #e91e63;
+}

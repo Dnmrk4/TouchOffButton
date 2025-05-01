@@ -1,26 +1,43 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background-color: #ffffff;
+  --foreground-color: #000000;
+  --button-background: #0070f3;
+  --button-hover-background: #005bb5;
+  --button-text-color: #ffffff;
+  --torch-button-width: 60px;
+  --torch-button-height: 60px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 30px;
+  width: var(--torch-button-width);
+  height: var(--torch-button-height);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-background);
+}
+
+.torch-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.torch-button.hidden {
+  transform: translateX(100%);
 }
